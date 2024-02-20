@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Your Custom Font', sans-serif;
+          
+        }
+    
+        footer {
+          display: flex;
+        }
+    
+        .first-division {
+          width: 30%;
+          background-color: #f1f1f1;
+          padding: 20px;
+          box-sizing: border-box;
+          font-family:sans-serif;
+          color: #888; /* Light gray color */
+          display: flex;
+        }
+        .social-media-links {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 20px;
+        }
+    
+        .social-media-links a {
+          text-decoration: none;
+          color: #333;
+        }
+    
+        .social-media-links img {
+          width: 30px;
+          height: 30px;
+        }
+    
+        .vertical-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+    
+        .vertical-list li {
+          margin-bottom: 10px;
+        }
+    
+        .second-division {
+          width: 70%;
+          background-color: #ddd;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+        .list-unstyled li a {
+          text-decoration: none; /* Remove underline */
+          color: inherit; /* Inherit text color from parent */
+      }
+     
+    
+    /* Adjust the line-height if needed */
+    ul.list-unstyled.mb-0 li {
+      list-style: inside;
+        line-height: 2.5; 
+        color: transparent;/* Adjust the value as needed for spacing */
+    }
+    /* Default styles for larger screens */
+.social-media-links a img {
+  width: 40px; /* Adjust the width according to your design */
+  height: auto;
+}
+
+.first-division{
+    display: flex;
+    
+    flex-direction: column;
+}
+.second-division{
+    display: flex;
+    flex-direction: column;
+}
+ 
+
+  @media screen and (max-width: 1000px) {
+    .social-media-links a img {
+      width: 20px; /* Adjust the width according to your design */
+      height: auto;
+      padding: 1px;
+
+    }
+    .second-division p {
+      /* Add your styles for the <p> tag within the second division here */
+      /* Example styles: */
+      font-size: 14px;
+      line-height: 1.5;
+      color: #555;
+      
+    }
+    .second-division{
+        flex-direction: column;
+    }
+    .first-division{
+        
+        flex-direction: column;
+    }
+    .vertical-list li {
+        margin-bottom: 10px;
+        font-size: 5px; /* Adjust the font size for smaller screens */
+    }
+}
+@media screen and (max-width: 768px) {
+    .text-uppercase {
+        font-size: 12px; /* Adjust the font size for smaller screens */
+    }
+
+    .list-unstyled.mb-0 li {
+        font-size: 10px; /* Adjust the font size for smaller screens */
+    }
+}
+.flex-container{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    padding-left:10%;
+    padding-right: 10%;
+}
+@media screen and (max-width: 445px) {
+    .flex-container {
+        flex-direction:column;
+        padding-left:0%;
+    padding-right: 0%;
+    }
+    .logo{
+        height: 45px;
+        width: 100px;
+    }
+    .flo{
+        height: 60px;
+        width: 110px;
+    }
+    .social-media-links{
+        display: none;
+    }
+    
+    .second-division p{
+        text-align: left;
+        width: 100%;
+          
+    }
+    
+
+}
+@media (max-width: 445px) {
+    /* Styles for screens with a maximum width of 440px or less */
+  
+    /* Adjust the styling for the button with dots.png */
+    .navbar-nav li.nav-item:last-child button {
+      padding: 5px; /* Add padding to the button */
+    }
+    
+    .navbar-nav li.nav-item:last-child img {
+      height: 20px; /* Adjust the height of the image */
+      width: 20px; /* Adjust the width of the image */
+    }
+  }
+  @media (max-width: 450px) {
+    .col-lg-3 {
+      flex: 0 0 100%; /* Make the columns take full width */
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .vertical-list li {
+      margin-bottom: 2px;
+      display: inline-block;
+      font-size: 12px; /* Set the font size to 10px */
+      margin: 0;
+      
+    }
+    .first-division {
+      width: 60%;
+      display: flex;
+    }
+    .second-division {
+      width: 100%;
+      display: flex;
+    }
+    .container p-4{
+      display: flex;
+      flex-direction: row;
+    }
+  
+  }
+  @media (max-width: 450px) {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* or any other preferred alignment */
+    }
+    .col-lg-2{
+      
+    } 
+  }
+  @media (max-width: 450px) {
+    .row.justify-content-center .col-lg-2 {
+      flex: 0 0 100%; /* Make the columns take full width */
+      max-width: 100%;
+      margin-bottom: 1rem; /* Add margin-bottom of 1 */
+    }
+  
+    .row.justify-content-center .col-md-6 {
+      flex: 0 0 50%; /* Make the columns take 50% width */
+      max-width: 50%;
+    }
+    .menu-icon{
+      display: none;
+    }
+  }
+  
+  
+  
+
+
+      
+      </style>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+    <!-- Example Code -->
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <!-- Replace the text with your logo or image -->
+            <img src="logo.png" style="height: 40px;" alt="Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="dice.png" alt="" style="height: 30px; width:30px"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto"> <!-- Center-align the items -->
+              <li class="nav-item me-5"> <!-- Add even more spacing -->
+                <a class="nav-link" href="#">IPO</a>
+              </li>
+              <li class="nav-item me-5"> <!-- Add even more spacing -->
+                <a class="nav-link" href="#">Community</a>
+              </li>
+              <li class="nav-item dropdown me-5"> <!-- Add even more spacing -->
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item me-5"> <!-- Add even more spacing -->
+                <a class="nav-link" href="#">Brokers</a>
+              </li>
+              <li class="nav-item me-5"> <!-- Add even more spacing -->
+                <a class="nav-link" href="#">Live News</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button type="button" class="btn btn-secondary btn-sm">Sign in</button>
+              </li>
+              &nbsp&nbsp
+              <li class="nav-item">
+                <button type="button" class="btn btn-primary btn-sm mr-3">Sign up Now</button>
+              </li>
+              &nbsp&nbsp
+              
+              <li class="nav-item">
+                <!-- Button with an image -->
+                <button type="button" style="border: none;">
+                  <a href="17704.png">
+                    <img src="dice.png" class="menu-icon" style="height: 30px; width: 24px; border: none; background-color: transparent;" alt="Button Image">
+                  </a>
+                </button>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <footer class="bg-body-tertiary text-center text-lg-start" style="background-color: transparent;">
+        <!-- Grid container -->
+        <div class="container p-4" style="background-color: transparent;">
+            <!--Grid row-->
+            <div class="row justify-content-center" style="font-size: small;">
+
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Resources</h5>
+          
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#!" class="text-body">Trading View</a></li>
+                      <li><a href="#!" class="text-body">NSE Holidays</a></li>
+                      <li><a href="#!" class="text-body">NSE Holidays</a></li>
+                      <li><a href="#!" class="text-body">e-Voting CDSL</a></li>
+                      <li><a href="#!" class="text-body">e-Voting NSDL</a></li>
+                      <li><a href="#!" class="text-body">Market Timings</a></li>
+                  </ul>
+              </div>
+          
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5 class="text-uppercase mb-0">Company</h5>
+          
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#!" class="text-body">Careers</a></li>
+                      <li><a href="#!" class="text-body">Contact Us</a></li>
+                      <li><a href="#!" class="text-body">About Us</a></li>
+                      <li><a href="#!" class="text-body">Community</a></li>
+                      <li><a href="#!" class="text-body">Blogs</a></li>
+                  </ul>
+              </div>
+              
+          
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Offerings</h5>
+          
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#!" class="text-body">Compare Broker</a></li>
+                      <li><a href="#!" class="text-body">Fin Calculators</a></li>
+                      <li><a href="#!" class="text-body">IPO</a></li>
+                      <li><a href="#!" class="text-body">All Brokers</a></li>
+                      <li><a href="#!" class="text-body">Products</a></li>
+                  </ul>
+              </div>
+          
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5 class="text-uppercase mb-0">Links</h5>
+          
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#!" class="text-body">Shark Investor</a></li>
+                      <li><a href="#!" class="text-body">Mutual Funds</a></li>
+                      <li><a href="#!" class="text-body">Sitemap</a></li>
+                      <li><a href="#!" class="text-body">Indian Indices</a></li>
+                      <li><a href="#!" class="text-body">Bug Bounty Program</a></li>
+                  </ul>
+              </div>
+          
+          </div>
+                   
+    
+        <!-- Copyright -->
+    </footer>
+    
+    <footer>
+        <div class="flex-container">
+    
+            <div class="first-division" style="background-color: transparent;">
+                <div class="social-media-links">
+                    <a href="#"><img src="facebook-app-symbol.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="youtube.png" alt="YouTube"></a>
+                </div>
+                <img class="logo" src="logo.png" alt="Footer Image" style="width: 100%;">
+                <ul class="vertical-list">
+                    <li>Bluestock Fintech</li>
+                    <li>Pune Maharashtra</li>
+                    <br>
+                    <li>MSME Registration No:</li>
+                    <li>UDYAM-MH-01-v0138001</li>
+                </ul>
+    
+                <img class="flo" src="Footer.png" alt="Footer Image" style="width: 100%;">
+            </div>
+    
+            <div class="second-division" style="background-color: transparent;">
+                <p>In securities markets are subject to market risks, read all the related documents carefully before investing as prescribed by SEBI, Issued in the interest of the investors
+                </p>
+                <p>The clients can write to hello@bluestock.in for any account opening related queries. Also, you can send IT/Tech-related feedback to cto@bluestock.in
+                </p>
+                <br><br>
+                <p>Disclaimer: We are not a SEBI registered research analyst company. We do not provide any kind of stock recommendations, buy/sell stock tips, or investment and trading advice. All the stock scripts shown in the BlueStock app are for educational purposes only. <br>
+                    Before making any investment in the financial market, it is advisable to consult with your financial advisor. Remember that stock markets are subject to market risks.
+                </p>
+            </div>
+    
+        </div>
+    
+        <!-- Copyright and Made in Pune, Maharashtra -->
+    </footer>
+    
+    
+  
+  <hr>
+  <div class="text-center p-3" style="background-color: #fff
+  ">
+    &copy; Bluestock Fintech. All rights reserved. Made in ❤️ Pune, Maharashtra
+  </div>
+    <!-- End Example Code -->
+  </body>
+</html>
